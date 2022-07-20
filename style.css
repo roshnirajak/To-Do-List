@@ -1,37 +1,63 @@
+body{
+    background: linear-gradient(to right top, #DE6262, #FFB88C);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+}
+
 .container{
-    position: absolute;
-    right: 50%;
-    transform: translate(50%);
-    background-color: #dddd;
-    height: 50%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-content:center ;
 
 }
 .content{
-    position: absolute;
-    top: 20%;
-    left:20%;
-    right: 20%;
+
+}
+.main{
+    font-size: large;
+}
+input{
+    border:none;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+button[type=submit]{
+    padding:5px 25px 5px 25px;
+    border: none;
+    background-color: #000;
+    color:#fff
+}
+h1{
+    font-family: 'Mali', cursive;
+    padding-bottom: 30px;
 }
 form{
     margin-bottom:100px
 }
 
-tr{
-    text-align: left;
-}
+
 th{
     background-color: rgb(65, 63, 63);
     color: white;
+    width:50px;
+    padding:7px 10px 7px 10px;
+}
+td{
+    padding:7px 10px 7px 10px;
 }
 
+
 @media screen and (max-width: 450px) {
-    .container{
-        width:70%
+
+    h1{
+        padding-top: 50px
     }
-    .content{
-        left:10%;
+    .container{
+        display:block;
     }
     table{
-        width:200px
+        width:90%
     }
 }

@@ -4,4 +4,5 @@ function addwork(){
     let display= document.getElementById('display');
 
     display.innerHTML=work;
+    return false;
 }
