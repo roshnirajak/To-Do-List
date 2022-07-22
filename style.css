@@ -26,8 +26,12 @@ input{
 button[type=submit]{
     padding:5px 25px 5px 25px;
     border: none;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.223);
     color:#fff
+}
+button[type=submit]:hover{
+    background-color: #fff;
+    color:#DE6262
 }
 h1{
     font-family: 'Mali', cursive;
@@ -39,10 +43,11 @@ form{
 
 
 th{
-    background-color: rgb(65, 63, 63);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.233);
+    color: #fff;
     width:50px;
     padding:7px 10px 7px 10px;
+
 }
 td{
     padding:7px 10px 7px 10px;
@@ -59,5 +64,8 @@ td{
     }
     table{
         width:90%
+    }
+    th, td{
+        padding:5px 10px 5px 10px;
     }
 }
