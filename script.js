@@ -3,6 +3,10 @@ function addwork(){
     let work= document.getElementById('work').value;
     let display= document.getElementById('display');
 
-    display.innerHTML=work;
+    if(localStorage.getItem('jsonElem')==null){
+        jsonArray=[];
+        jsonArray.push(work);
+        localStorage.setItem('jsonElem', JSON.stringify(jsonArray))
+    }
     return false;
 }
