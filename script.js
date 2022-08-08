@@ -1,5 +1,6 @@
 function getAndUpdate() {
     console.log("Heloo");
+    
     let work = document.getElementById('work').value;
 
     if (localStorage.getItem('jsonElem') == null) {
@@ -12,11 +13,14 @@ function getAndUpdate() {
         jsonArray = JSON.parse(jsonArrayStr);
         jsonArray.push(work);
         localStorage.setItem('jsonElem', JSON.stringify(jsonArray));
+        
     }
+    
     addwork();
 }
 addwork();
 function addwork() {
+    
     if (localStorage.getItem('jsonElem') == null) {
         jsonArray = [];
         localStorage.setItem('jsonElem', JSON.stringify(jsonArray))
@@ -28,13 +32,9 @@ function addwork() {
     let tbody = document.getElementById('tbody');
     let tableTr = document.getElementById('bgcolor');
     let item = "";
+   console.log(jsonArray.length)
     jsonArray.forEach((element, index) => {
-        if(index%2==0){
-            tableTr.style.backgroundColor='#fcc4c491';
-        }
-        // else{
-        //     tableTr.style.backgroundColor='#fff0';
-        // }
+        
         item += `
         <tr>
         <td>${index + 1}</td>
@@ -45,7 +45,6 @@ function addwork() {
     </tr> `;
     
     });
-
     tbody.innerHTML = item;
 }
 function remove(index) {
